@@ -12,6 +12,7 @@ namespace CoffeeShopAssignmentUI.BLL
    public class OrderManager
     {
         OrderRepository _orderRepository = new OrderRepository();
+
         public DataTable GetAllItem()
         {
             return _orderRepository.GetAllItem();
@@ -19,6 +20,14 @@ namespace CoffeeShopAssignmentUI.BLL
         public DataTable GetAllCustomer()
         {
             return _orderRepository.GetAllCustomer();
+        }
+        public bool AddOrder(Order order)
+        {
+            return _orderRepository.AddOrder(order);
+        }
+        public bool IsNullOrEmpty(Order order)
+        {
+            return _orderRepository.IsNullOrEmpty(order);
         }
 
     }

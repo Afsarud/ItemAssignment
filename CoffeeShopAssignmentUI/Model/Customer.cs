@@ -13,6 +13,6 @@ namespace CoffeeShopAssignmentUI.Model
         public string Name { set; get; }
         public string Address { set; get; }
         public string Contact { set; get; }
-
+        public string District { set; get; }
     }
 }

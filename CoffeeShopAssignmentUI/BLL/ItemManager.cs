@@ -13,30 +13,31 @@ namespace CoffeeShopAssignmentUI.BLL
     public class ItemManager
     {
         ItemRepository _itemRepository = new ItemRepository();
+
         public bool Add(Item item)
         {
             return _itemRepository.Add(item);
 
         }
-        public bool IsNameExists(string name)
+        public bool IsNameExists(Item item)
         {
-            return _itemRepository.IsNameExists(name);
+            return _itemRepository.IsNameExists(item);
         }
         public DataTable Display()
         {
             return _itemRepository.Display();
         }
-        public bool Delete(int ItemId)
+        public bool Delete(Item item)
         {
-            return _itemRepository.Delete(ItemId);
+            return _itemRepository.Delete(item);
         }
-        public bool Update(string Name, double Price, int ItemId)
+        public bool Update(Item item)
         {
-            return _itemRepository.Update(Name, Price, ItemId);
+            return _itemRepository.Update(item);
         }
-        public DataTable Search(string name)
+        public List<Item> Search(Item item)
         {
-            return _itemRepository.Search(name);
+            return _itemRepository.Search(item);
         }
         public DataTable ItemCombobox()
         {

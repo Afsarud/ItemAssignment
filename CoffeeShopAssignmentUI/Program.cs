@@ -16,7 +16,9 @@ namespace CoffeeShopAssignmentUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ItemAssignmentUI());
+           // Application.Run(new ItemAssignmentUI());
+            //Application.Run(new OrderAssignmentUI());
+            Application.Run(new CustomerInfoUI());
         }
     }
 }

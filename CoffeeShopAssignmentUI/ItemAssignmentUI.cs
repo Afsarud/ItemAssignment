@@ -26,7 +26,7 @@ namespace CoffeeShopAssignmentUI
         {
             _item.Name = nameTextBox.Text;
             //Check UNIQUE
-            if (_itemManager.IsNameExists(_item.Name))
+            if (_itemManager.IsNameExists(_item))
             {
                 MessageBox.Show(nameTextBox.Text + "Already Exists!");
                 return;
@@ -77,7 +77,7 @@ namespace CoffeeShopAssignmentUI
             }
 
             //Delete
-            if (_itemManager.Delete(Convert.ToInt32(idtextBox.Text)))
+            if (_itemManager.Delete(_item))
             {
                 MessageBox.Show("Deleted");
             }
@@ -109,7 +109,7 @@ namespace CoffeeShopAssignmentUI
             _item.Name = nameTextBox.Text;
             _item.Price = Convert.ToDouble(priceTextBox.Text);
             _item.ID = Convert.ToInt32(idtextBox.Text);
-            if (_itemManager.Update(_item.Name, _item.Price, _item.ID))
+            if (_itemManager.Update(_item))
             {
                 MessageBox.Show("Updated");
                 showDataGridView.DataSource = _itemManager.Display();
@@ -129,8 +129,9 @@ namespace CoffeeShopAssignmentUI
                 return;
             }
 
+            _item.Name = nameTextBox.Text;
             showDataGridView.DataSource =
-           _itemManager.Search(nameTextBox.Text);
+           _itemManager.Search(_item);
             nameTextBox.Clear();
             priceTextBox.Clear();
             idtextBox.Clear();

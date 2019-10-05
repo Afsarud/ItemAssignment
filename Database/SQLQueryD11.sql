@@ -1,6 +1,3 @@
-
-CREATE DATABASE CoffeeShopAssignmentUI
-
 CREATE TABLE Items(
 ID INT IDENTITY(1,1) ,
 Name VARCHAR(50),
@@ -26,6 +23,7 @@ INSERT INTO Customers VALUES ('Rafi', 'BNorisal' ,'01811369369')
 
 SELECT * FROM Items
 SELECT * FROM Customers
+Select * FROM Orders
 
 CREATE TABLE Orders
 (
@@ -43,3 +41,15 @@ INSERT INTO Orders VALUES (1, 3 , 2, 200)
 INSERT INTO Orders VALUES (2, 2 , 2, 160)
 INSERT INTO Orders VALUES (2, 3 , 3, 300)
 INSERT INTO Orders VALUES (2, 4 , 4, 400)
+
+
+CREATE VIEW OrdersDetailsView
+AS
+SELECT c.Name As Customer, i.Name AS Item , o.Quantity, o.TotalPrice
+FROM Orders AS o 
+LEFT JOIN customers AS c ON c.Id = o.CustomerId 
+LEFT JOIN Items AS i ON i.ID = o.ItemId
+
+--Joining quary
+Select * FROM OrdersDetailsView
+
