@@ -16,9 +16,11 @@ namespace CoffeeShopAssignmentUI
     {
         CustomerManager _CustomerManager = new CustomerManager();
         Customer _customer = new Customer();
+
         public CustomerInfoUI()
         {
             InitializeComponent();
+            updateButton.Hide();
         }
 
         private void CustomerInfoUI_Load(object sender, EventArgs e)
@@ -28,6 +30,19 @@ namespace CoffeeShopAssignmentUI
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            
+            if (_CustomerManager.IsNameExsist(_customer))
+            {
+                _customer.Id = Convert.ToInt32(codeTextBox.Text);
+                MessageBox.Show("Code is dublicat !!");
+                return;
+            }
+            
+            if(codeTextBox.Text.Length!=4)
+            {
+                MessageBox.Show("length 4 digit");
+                return;
+            }
             _customer.Name = nameTextBox.Text;
             //Check UNIQUE
             if (_CustomerManager.IsNameExsist(_customer))
@@ -82,17 +97,78 @@ namespace CoffeeShopAssignmentUI
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            _customer.Id =Convert.ToInt32 (_customer);
-            if (string.IsNullOrEmpty(idTextBox.Text))
+            //Mandatory
+            if (string.IsNullOrEmpty(nameTextBox.Text))
             {
                 MessageBox.Show("Feild id Empty !!");
                 return;
             }
 
-            showDataGridView.DataSource = _CustomerManager.CustomerSearch();
+            showDataGridView.DataSource = _CustomerManager.CustomerSearch(_customer);
             nameTextBox.Clear();
             nameTextBox.Clear();
             contactTextBox.Clear();
+        }
+
+        private void showDataGridView_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void showDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (showDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                saveButton.Hide();
+                updateButton.Text.Count();
+                showDataGridView.CurrentRow.Selected = true;
+                //string id = showDataGridView.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString();
+                //var st = (from s in db._customer where s.ID == int.Parse(id) select ToString());
+                //db.MyInfotabs.DeleteOnSubmit(st);
+                //db.submitChanges();
+                //MessageBox.Show("Delete successfull");
+                //loaddata();
+                
+                codeTextBox.Text = showDataGridView.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString();
+                nameTextBox.Text = showDataGridView.Rows[e.RowIndex].Cells["Name"].FormattedValue.ToString();
+                addressTextBox.Text = showDataGridView.Rows[e.RowIndex].Cells["Address"].FormattedValue.ToString();
+                contactTextBox.Text = showDataGridView.Rows[e.RowIndex].Cells["Contact"].FormattedValue.ToString();
+                districtComboBox.Text = showDataGridView.Rows[e.RowIndex].Cells["District"].FormattedValue.ToString();
+            }
+        }
+
+        private void showDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            saveButton.Hide();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            //Set Id as Mandatory
+            if (String.IsNullOrEmpty(codeTextBox.Text))
+            {
+                MessageBox.Show("Unique Can not be Empty!!!");
+                return;
+            }
+            //Set Price as Mandatory
+            if (String.IsNullOrEmpty(nameTextBox.Text))
+            {
+                MessageBox.Show("Name Can not be Empty!!!");
+                return;
+            }
+            _customer.Name = nameTextBox.Text;
+            _customer.Contact = contactTextBox.Text;
+            _customer.Address = addressTextBox.Text;
+            if (_CustomerManager.Update(_customer))
+            {
+                MessageBox.Show("Updated");
+                showDataGridView.DataSource = _CustomerManager.Display();
+            }
+            else
+            {
+                MessageBox.Show("Not Updated");
+            }
         }
     }
 }
