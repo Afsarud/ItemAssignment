@@ -20,3 +20,6 @@ F:\batch06\Practice\ItemAssignment\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAs
 F:\batch06\Practice\ItemAssignment\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.csproj.GenerateResource.Cache
 F:\batch06\Practice\ItemAssignment\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.CustomerAssignmentUI.resources
 F:\batch06\Practice\ItemAssignment\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.CustomerInfoUI.resources
+C:\Users\ADMIN\Documents\GitHub\ItemAssignment\CoffeeShopAssignmentUI\bin\Debug\CoffeeShopAssignmentUI.exe.config
+C:\Users\ADMIN\Documents\GitHub\ItemAssignment\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.exe
+C:\Users\ADMIN\Documents\GitHub\ItemAssignment\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.pdb

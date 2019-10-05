@@ -68,5 +68,10 @@ namespace CoffeeShopAssignmentUI
             itemComboBox.DataSource = _orderManager.GetAllItem();
             customerComboBox.DataSource = _orderManager.GetAllCustomer();
         }
+
+        private void totalPriceTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("Welcome back !!!");
+        }
     }
 }

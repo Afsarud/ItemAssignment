@@ -99,6 +99,7 @@
             this.totalPriceTextBox.Name = "totalPriceTextBox";
             this.totalPriceTextBox.Size = new System.Drawing.Size(121, 20);
             this.totalPriceTextBox.TabIndex = 7;
+            this.totalPriceTextBox.TextChanged += new System.EventHandler(this.totalPriceTextBox_TextChanged);
             // 
             // showDataGridView
             // 
