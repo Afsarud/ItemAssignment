@@ -10,6 +10,7 @@ namespace CoffeeShopAssignmentUI.Model
    public class Customer
     {
         public int Id { set; get; }
+        public int Code { set; get; }
         public string Name { set; get; }
         public string Address { set; get; }
         public string Contact { set; get; }

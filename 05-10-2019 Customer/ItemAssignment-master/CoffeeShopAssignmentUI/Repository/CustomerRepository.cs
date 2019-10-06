@@ -20,12 +20,12 @@ namespace CoffeeShopAssignmentUI.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-GIE8L6J; Database=CoffeeShopAssignmentUI; Integrated Security=True";
+                string connectionString = @"Server=DESKTOP-U56OU4N\SA; Database=CoffeeShopAssignmentUI; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
                 //INSERT INTO Items (Name, Price) Values ('Black', 120)
-                string commandString = @" Insert into Customers values( '"+customer.Name+"','"+customer.Address+"','"+customer.Contact+"','"+customer.District+"')";
+                string commandString = @" Insert into Customers values( '" + customer.Code + "'+'" + customer.Name+"','"+customer.Address+"','"+customer.Contact+"','"+customer.District+"')";
                 SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
 
                 //Open
@@ -56,7 +56,7 @@ namespace CoffeeShopAssignmentUI.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-GIE8L6J; Database=CoffeeShopAssignmentUI; Integrated Security=True";
+                string connectionString = @"Server=DESKTOP-U56OU4N\SA; Database=CoffeeShopAssignmentUI; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
@@ -91,7 +91,7 @@ namespace CoffeeShopAssignmentUI.Repository
             try
             {
                 //Connection
-                string connectionString = @"Server=DESKTOP-GIE8L6J; Database=CoffeeShopAssignmentUI; Integrated Security=True";
+                string connectionString = @"Server=DESKTOP-U56OU4N\SA; Database=CoffeeShopAssignmentUI; Integrated Security=True";
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
 
                 //Command 
@@ -105,17 +105,8 @@ namespace CoffeeShopAssignmentUI.Repository
 
                 //Show
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-
                 sqlDataAdapter.Fill(dataTable);
-                //if (dataTable.Rows.Count > 0)
-                //{
-                //    showDataGridView.DataSource = dataTable;
-                //}
-                //else
-                //{
-                //    MessageBox.Show("No Data Found");
-                //}
-
+              
                 //Close
                 sqlConnection.Close();
 
@@ -131,7 +122,7 @@ namespace CoffeeShopAssignmentUI.Repository
         {
             DataTable dataTable = new DataTable();
            
-            string ConnectioString = @"Server=DESKTOP-GIE8L6J; Database=CoffeeShopAssignmentUI; Integrated Security=True";
+            string ConnectioString = @"Server=DESKTOP-U56OU4N\SA; Database=CoffeeShopAssignmentUI; Integrated Security=True";
             SqlConnection sqlConnection = new SqlConnection(ConnectioString);
 
             string CommandString = @"SELECT Id, District FROM Customers";
@@ -147,24 +138,67 @@ namespace CoffeeShopAssignmentUI.Repository
             return dataTable;
         
         }
-        public DataTable CustomerSearch()
+        public DataTable CustomerSearch(Customer customer)
         {
             DataTable dataTable = new DataTable();
+            try
+            {
 
-            string ConnectioString = @"Server=DESKTOP-GIE8L6J; Database=CoffeeShopAssignmentUI; Integrated Security=True";
-            SqlConnection sqlConnection = new SqlConnection(ConnectioString);
+                string ConnectioString = @"Server=DESKTOP-U56OU4N\SA; Database=CoffeeShopAssignmentUI; Integrated Security=True";
+                SqlConnection sqlConnection = new SqlConnection(ConnectioString);
 
-            string CommandString = @"SELECT * FROM Customers";
-            SqlCommand sqlCommand = new SqlCommand(CommandString, sqlConnection);
+                string CommandString = @"SELECT * FROM Customers";
+                SqlCommand sqlCommand = new SqlCommand(CommandString, sqlConnection);
 
-            sqlConnection.Open();
+                sqlConnection.Open();
 
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-            sqlDataAdapter.Fill(dataTable);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
 
-            sqlConnection.Close();
+                sqlConnection.Close();
 
+              
+            }
+            catch (Exception exception)
+            {
+
+                MessageBox.Show(exception.Message);
+            }
             return dataTable;
+
+        }
+        public bool Update(Customer customer)
+        {
+            try
+            {
+                //Connection
+                string connectionString = @"Server= Server=DESKTOP-U56OU4N\SA; Database=CoffeeShopAssignmentUI; Integrated Security=True";
+                SqlConnection sqlConnection = new SqlConnection(connectionString);
+
+                //Command 
+                //UPDATE Items SET Name =  'Hot' , Price = 130 WHERE ID = 1
+                string commandString = @"UPDATE Items SET Name =  '" + customer.Id + "' ,'" + customer.Name + "' , Price = " + customer.Address + " , Price = " + customer.Contact + " WHERE ID = " + customer.Id + "";
+                SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+
+                //Open
+                sqlConnection.Open();
+
+                //Insert
+                int isExecuted = sqlCommand.ExecuteNonQuery();
+                if (isExecuted > 0)
+                {
+                    return true;
+                }
+                //Close
+                sqlConnection.Close();
+
+
+            }
+            catch (Exception exeption)
+            {
+                MessageBox.Show(exeption.Message);
+            }
+            return false;
         }
     }
 }

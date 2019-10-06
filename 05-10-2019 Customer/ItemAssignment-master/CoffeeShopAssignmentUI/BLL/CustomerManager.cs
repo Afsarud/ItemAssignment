@@ -26,9 +26,13 @@ namespace CoffeeShopAssignmentUI.BLL
         {
             return _CustomerRepository.Display();
         }
-        public DataTable CustomerSearch()
+        public DataTable CustomerSearch(Customer customer)
         {
-            return _CustomerRepository.CustomerSearch();
+            return _CustomerRepository.CustomerSearch(customer);
+        }
+        public bool Update(Customer customer)
+        {
+            return _CustomerRepository.Update(customer);
         }
         public DataTable CustomerComboBox()
         {

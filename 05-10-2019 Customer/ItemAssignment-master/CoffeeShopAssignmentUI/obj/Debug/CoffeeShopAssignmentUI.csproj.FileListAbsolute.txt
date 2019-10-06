@@ -33,3 +33,15 @@ F:\Batch6Afsar\Backup file\05-10-2019 Customers\ItemAssignment-master\CoffeeShop
 F:\Batch6Afsar\Backup file\05-10-2019 Customers\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.csproj.CoreCompileInputs.cache
 F:\Batch6Afsar\Backup file\05-10-2019 Customers\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.exe
 F:\Batch6Afsar\Backup file\05-10-2019 Customers\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.pdb
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\bin\Debug\CoffeeShopAssignmentUI.exe.config
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.exe
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.pdb
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\bin\Debug\CoffeeShopAssignmentUI.exe
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\bin\Debug\CoffeeShopAssignmentUI.pdb
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.csprojResolveAssemblyReference.cache
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.CustomerAssignmentUI.resources
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.CustomerInfoUI.resources
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.ItemAssignmentUI.resources
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.OrderAssignmentUI.resources
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.Properties.Resources.resources
+F:\batch06\customerInfor05-10-2019\ItemAssignment\05-10-2019 Customer\ItemAssignment-master\CoffeeShopAssignmentUI\obj\Debug\CoffeeShopAssignmentUI.csproj.GenerateResource.Cache
