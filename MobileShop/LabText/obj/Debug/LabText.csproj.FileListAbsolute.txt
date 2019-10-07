@@ -1,0 +1,10 @@
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\bin\Debug\LabText.exe.config
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\bin\Debug\LabText.exe
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\bin\Debug\LabText.pdb
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.csprojAssemblyReference.cache
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.InputMobileUI.resources
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.Properties.Resources.resources
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.csproj.GenerateResource.cache
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.csproj.CoreCompileInputs.cache
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.exe
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.pdb

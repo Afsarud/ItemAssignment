@@ -11,6 +11,6 @@ namespace LabText.Model
         public int Id { set; get;}
         public string Name { set; get; }
         public string IMEI { set; get; }
-        public bool Price { set; get; }
+        public int Price { set; get; }
     }
 }
