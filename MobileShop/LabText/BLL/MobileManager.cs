@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LabText.Model;
+using System.Data;
 
 namespace LabText.BLL
 {
@@ -20,6 +21,10 @@ namespace LabText.BLL
         public bool IsEMEIExist(Mobile mobile)
         {
            return _mobileRepository.IsEMEIExist(mobile);
+        }
+        public DataTable SearchValue(Mobile mobile)
+        {
+           return _mobileRepository.SearchValue(mobile);
         }
 
     }

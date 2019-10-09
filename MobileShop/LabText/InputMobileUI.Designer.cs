@@ -74,6 +74,7 @@
             // imeiTextBox
             // 
             this.imeiTextBox.Location = new System.Drawing.Point(103, 71);
+            this.imeiTextBox.MaxLength = 15;
             this.imeiTextBox.Name = "imeiTextBox";
             this.imeiTextBox.Size = new System.Drawing.Size(197, 20);
             this.imeiTextBox.TabIndex = 4;

@@ -43,9 +43,9 @@ namespace LabText
                     return;
                 }
 
-                if (_mobile.IMEI.Length != 11)
+                if (_mobile.IMEI.Length != 15)
                 {
-                    MessageBox.Show("Please enter 11 digit !!");
+                    MessageBox.Show("Please enter 15 digit !!");
                     return;
                 }
                 //Unique

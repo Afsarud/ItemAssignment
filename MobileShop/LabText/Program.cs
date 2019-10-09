@@ -17,6 +17,7 @@ namespace LabText
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new InputMobileUI());
+            Application.Run(new SearchPriceUI());
         }
     }
 }

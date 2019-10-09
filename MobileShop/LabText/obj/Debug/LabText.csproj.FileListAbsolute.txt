@@ -8,3 +8,4 @@ F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.csproj.Genera
 F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.csproj.CoreCompileInputs.cache
 F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.exe
 F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.pdb
+F:\Batch6Afsar\ItemAssignment\MobileShop\LabText\obj\Debug\LabText.SearchPriceUI.resources

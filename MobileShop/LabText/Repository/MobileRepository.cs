@@ -78,5 +78,31 @@ namespace LabText.Repository
                 }
             return IsExist;
         }
+
+        public DataTable SearchValue(Mobile mobile)
+        {
+            DataTable dataTable = new DataTable();
+            
+            //SqlConnection
+            string connectionString = @"server = DESKTOP-GIE8L6J; Database= MobileShop; Integrated Security= True ";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+
+            // Command 
+
+            string commandString = @"Select * from  Mobile where Price between '"+mobile.PriceFrom+"' AND '"+mobile.PriceTo+"'";
+            SqlCommand sqlCommand = new SqlCommand(commandString, sqlConnection);
+
+            //Open
+            sqlConnection.Open();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.Fill(dataTable);
+           
+
+            //Close
+            sqlConnection.Close();
+            return dataTable;
+        }
+
+
     }
 }
